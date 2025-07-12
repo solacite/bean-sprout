@@ -265,6 +265,8 @@ label start:
 
             s "Nothing..."
 
+            b "Okay then..."
+
         "Abandon Bean in the streets":
             b "Noooooooooooooooooooooo"
             
