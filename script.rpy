@@ -267,6 +267,10 @@ label start:
 
             b "Okay then..."
 
+            s "Let's go. Unless you want to sleep outside."
+
+            b "Fiiiiiiiiiiine."
+
         "Abandon Bean in the streets":
             b "Noooooooooooooooooooooo"
             
@@ -321,5 +325,11 @@ label start:
             s "N-"
 
             b "BET."
+
+            s "I was joking!"
+
+            ".:. Bad Ending."
+            
+            return
 
     return
