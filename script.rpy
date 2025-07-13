@@ -6,6 +6,9 @@
 define b = Character("bean")
 define s = Character("sprout")
 define n = Character("narrator")
+define m = Character("???")
+define db = Character("Bean's Doppelganger")
+
 # bean: concerned, confused, happy
 # sprout: confused, dumb, inquisitive
 
@@ -37,6 +40,14 @@ label start:
 
     scene background
 
+    call intro
+    call out_for_lunch
+    call after_lunch
+    call go_home
+    call cookie_steal
+
+
+label intro:
     show bean at small
     with dissolve
 
@@ -78,6 +89,7 @@ label start:
 
     s "And I'm pretty hungry."
 
+label out_for_lunch:
     menu:
         "Should Sprout..."
 
@@ -151,6 +163,7 @@ label start:
 
     hide bean with dissolve
 
+label after_lunch:
     n "After coming back from a well-deserved (for Sprout) fast food outing, the two return to their comfort cove."
 
     n "Or, rather, a rather dead patch of grass bordering their town's park."
@@ -236,6 +249,7 @@ label start:
 
             s "..."
     
+label go_home:
     s "I'm feeling a bit tired. I'll probably go soon."
 
     show confused bean at smallright
@@ -266,8 +280,6 @@ label start:
             s "Let's go. Unless you want to sleep outside."
 
             b "Fiiiiiiiiiiine."
-
-            n "Good ending :D"
 
         "Abandon Bean in the streets":
             b "Noooooooooooooooooooooo"
@@ -312,8 +324,6 @@ label start:
 
             b ">:("
 
-            n "Bad ending :0"
-
         "Knock over Bean's Jenga tower and then leave":
 
             show confused bean at smallright
@@ -330,6 +340,6 @@ label start:
 
             b "Uh-huh."
 
-            n "Bad ending :O"
+label cookie_steal:
 
     return
