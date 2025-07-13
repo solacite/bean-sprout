@@ -9,13 +9,15 @@ define n = Character("narrator")
 # bean: concerned, confused, happy
 # sprout: confused, dumb, inquisitive
 
+transform small:
+    zoom 0.8
 
 label start:
 
 
     scene background
 
-    show bean
+    show bean at small
 
     n "This is Bean."
 
@@ -27,7 +29,7 @@ label start:
 
     hide bean
 
-    show sprout
+    show sprout at small
 
     n "This is Sprout."
 
@@ -42,7 +44,7 @@ label start:
 
         "Pressure him into talking":
 
-            show confused sprout
+            show confused sprout at small
 
             s "..."
 
@@ -64,7 +66,7 @@ label start:
 
         "Starve":
 
-            show inquisitive sprout
+            show inquisitive sprout at small
 
             s "This seems like a terrible idea. I'll not listen to you."
 
@@ -72,9 +74,9 @@ label start:
 
     hide sprout
 
-    show sprout at left
+    show sprout at left, small
     
-    show bean at right
+    show bean at right, small
 
     s "Do you want to eat out, Bean?"
 
@@ -84,11 +86,11 @@ label start:
 
     s "...B-"
 
-    show concerned bean at right
+    show concerned bean at right, small
 
     b "I'M TRYING TO FOCUSSAJDLKSFSFAO"
 
-    show inquisitive sprout at left
+    show inquisitive sprout at left, small
 
     s "ON WHAT EXACTLY???"
 
@@ -111,7 +113,7 @@ label start:
 
             b "It means what it means..."
 
-            show dumb sprout at left
+            show dumb sprout at left, small
 
             s "???"
 
@@ -121,7 +123,7 @@ label start:
 
             hide concerned bean
 
-            show confused bean at right
+            show confused bean at right, small
 
             b "I'm trying to FOCUS."
 
@@ -135,7 +137,7 @@ label start:
 
             hide concerned bean
 
-            show happy bean at right
+            show happy bean at right, small
 
             b "I gave up."
 
@@ -151,9 +153,9 @@ label start:
 
     n "Or, rather, a rather dead patch of grass bordering their town's park."
 
-    show sprout at left
+    show sprout at left, small
 
-    show confused bean at right
+    show confused bean at right, small
 
     b "..."
 
@@ -175,24 +177,24 @@ label start:
 
     s "You're...?"
 
-    show concerned bean at right
+    show concerned bean at right, small
 
     hide confused bean
 
     b "I'M HUNGRY YOU STUPID KNUCKLEBUNS"
 
-    show inquisitive sprout at left
+    show inquisitive sprout at left, small
 
     s "..."
 
-    hide inquisitve sprout
+    hide inquisitive sprout
 
     menu:
         "Choose a question."
 
         "WHY THE HELL ARE YOU STILL HUNGRY????":
 
-            show bean at right
+            show bean at right, small
 
             hide concerned bean
 
@@ -206,7 +208,7 @@ label start:
 
         "WHAT THE HELL IS A KNUCKLEBUNS????":
 
-            show happy bean at right
+            show happy bean at right, small
 
             hide concerned bean
 
@@ -224,7 +226,7 @@ label start:
 
         "WHY THE HELL ARE YOU CALLING ME STUPID????":
 
-            show bean at right
+            show bean at right, small
 
             hide concerned bean
 
@@ -242,7 +244,7 @@ label start:
     
     s "I'm feeling a bit tired. I'll probably go soon."
 
-    show confused bean at right
+    show confused bean at right, small
 
     b "What about me??"
 
@@ -251,7 +253,7 @@ label start:
 
         "Take Bean with you":
 
-            show happy bean at right
+            show happy bean at right, small
 
             b "Yippee!!!!"
 
@@ -280,7 +282,7 @@ label start:
 
             b "You can't do me like this!"
 
-            show inquisitive sprout at left
+            show inquisitive sprout at left, small
 
             s "What if I can?"
 
@@ -316,11 +318,11 @@ label start:
 
         "Knock over Bean's Jenga tower and then leave":
 
-            show confused bean at right    
+            show confused bean at right, small
 
             b "You wanna die???"
 
-            show confused sprout at left
+            show confused sprout at left, small
 
             s "N-"
 
