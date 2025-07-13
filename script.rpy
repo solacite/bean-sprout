@@ -9,6 +9,16 @@ define n = Character("narrator")
 # bean: concerned, confused, happy
 # sprout: confused, dumb, inquisitive
 
+image bean = "bean.png"
+image bean concerned = "bean concerned.png"
+image bean confused = "bean confused.png"
+image bean happy = "bean happy.png"
+
+image sprout = "sprout.png"
+image sprout confused = "sprout confused.png"
+image sprout dumb = "sprout dumb.png"
+image sprout inquisitive = "sprout inquisitive.png"
+
 transform small:
     zoom 0.8
     xalign 0.5
@@ -60,8 +70,6 @@ label start:
 
             s "..."
 
-            hide confused sprout
-
         "Say nothing":
             s "Well..."
 
@@ -81,10 +89,6 @@ label start:
             show inquisitive sprout at small
 
             s "This seems like a terrible idea. I'll not listen to you."
-
-            hide inquisitive sprout
-
-    hide sprout
 
     show sprout at smallleft
     
@@ -110,14 +114,10 @@ label start:
 
     s "I have so many questions for you..."
 
-    hide inquisitive sprout
-
     menu:
         "Choose a question."
 
         "ARE YOU HUNGRY????":
-
-            hide concerned bean
 
             b "Moderately so."
 
@@ -129,11 +129,7 @@ label start:
 
             s "???"
 
-            hide dumb sprout
-
         "WHY ARE YOU PLAYING JENGA ALONE????":
-
-            hide concerned bean
 
             show confused bean at smallright
 
@@ -142,20 +138,14 @@ label start:
             s "THAT DOESN'T ANSWER THE QUESTION??"
 
             b "BUT IT DOES??"
-
-            hide confused bean
         
         "WHAT HAPPENED TO STUDYING FOR FINALS????":
-
-            hide concerned bean
 
             show happy bean at smallright
 
             b "I gave up."
 
             s "Loser."
-
-            hide happy bean
 
     hide sprout with dissolve
 
@@ -193,15 +183,11 @@ label start:
 
     show concerned bean at smallright
 
-    hide confused bean
-
     b "I'M HUNGRY YOU STUPID KNUCKLEBUNS"
 
     show inquisitive sprout at smallleft
 
     s "..."
-
-    hide inquisitive sprout
 
     menu:
         "Choose a question."
@@ -209,8 +195,6 @@ label start:
         "WHY THE HELL ARE YOU STILL HUNGRY????":
 
             show bean at smallright
-
-            hide concerned bean
 
             b "Smart people eat more."
 
@@ -224,8 +208,6 @@ label start:
 
             show happy bean at smallright
 
-            hide concerned bean
-
             b "See, you're stupid. It's a part of the vocabulary these days."
 
             s "These days...?"
@@ -238,13 +220,9 @@ label start:
 
             show bean at smallright
 
-            hide happy bean
-
         "WHY THE HELL ARE YOU CALLING ME STUPID????":
 
             show bean at smallright
-
-            hide concerned bean
 
             b "I only speak the truth."
 
