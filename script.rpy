@@ -34,6 +34,17 @@ transform smallleft:
     zoom 0.8
     xalign 0.0
 
+label clear:
+    hide bean
+    hide sprout
+    hide concerned bean
+    hide confused bean
+    hide happy bean
+    hide confused sprout
+    hide inquisitive sprout
+    hide dumb sprout
+    return
+
 label start:
 
     play music "vibe.mp3" loop
@@ -91,6 +102,9 @@ label out_for_lunch:
         "Should Sprout..."
 
         "Ask Bean out for lunch":
+
+            hide sprout
+
             s "Alright...I'll do it."
 
         "Starve":
@@ -98,8 +112,8 @@ label out_for_lunch:
             show inquisitive sprout at small
 
             s "This seems like a terrible idea. I'll not listen to you."
-    
-    hide inquisitive sprout
+
+    call clear
 
     show sprout at smallleft
     
@@ -374,14 +388,14 @@ label cookie_steal:
 
     s "That thing is literally worth less than my life savings, and I don't even work a job..."
 
-    bool skedaddle = False;
+    default skedaddle = False
 
-    if (!skedaddle):
+    if not skedaddle:
         menu:
             "What should Sprout do?"
 
             "Run after Bean":
-                skedaddle = True
+                $ skedaddle = True
                 s "I'M COMINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
 
             "Stay still":
