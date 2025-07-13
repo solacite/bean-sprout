@@ -498,4 +498,38 @@ label fight:
     jump sunset
 
 label sunset:
-    #
+    b "Well. That was a lovely day. Wasn't it?"
+
+    s "Mhm."
+
+    b "The sun should be setting around now. Wanna go take a look?"
+
+    menu:
+        "What will Sprout do?":
+            "Go home":
+                b "Well. I guess that's okay."
+
+                b "Goodnight, Sprout."
+
+                s "'Night, Bean."
+
+                n "Congrats on getting the good ending!"
+
+            "Watch the sunset":
+                n "The two walk to the dock and sit at its edge."
+
+                n "The sunset is magnificient."
+
+                b "Isn't this nice."
+
+                s "You know, it'd be cool if-"
+
+                m "Hehehe!"
+
+                b "Again???"
+
+                n "The two are shoved into the ocean. As they fall, Sprout can make out a face."
+
+                s "My doppelganger...???"
+
+                n "Bad ending D:"
