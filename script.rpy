@@ -11,6 +11,15 @@ define n = Character("narrator")
 
 transform small:
     zoom 0.8
+    xalign 0.5
+
+transform smallright:
+    zoom 0.8
+    xalign 1.0
+
+transform smallleft:
+    zoom 0.8
+    xalign 0.0
 
 label start:
 
@@ -77,9 +86,9 @@ label start:
 
     hide sprout
 
-    show sprout at left, small
+    show sprout at smallleft
     
-    show bean at right, small
+    show bean at smallright
 
     s "Do you want to eat out, Bean?"
 
@@ -89,11 +98,11 @@ label start:
 
     s "...B-"
 
-    show concerned bean at right, small
+    show concerned bean at smallright
 
     b "I'M TRYING TO FOCUSSAJDLKSFSFAO"
 
-    show inquisitive sprout at left, small
+    show inquisitive sprout at smallleft
 
     s "ON WHAT EXACTLY???"
 
@@ -116,7 +125,7 @@ label start:
 
             b "It means what it means..."
 
-            show dumb sprout at left, small
+            show dumb sprout at smallleft
 
             s "???"
 
@@ -126,7 +135,7 @@ label start:
 
             hide concerned bean
 
-            show confused bean at right, small
+            show confused bean at smallright
 
             b "I'm trying to FOCUS."
 
@@ -140,7 +149,7 @@ label start:
 
             hide concerned bean
 
-            show happy bean at right, small
+            show happy bean at smallright
 
             b "I gave up."
 
@@ -156,10 +165,10 @@ label start:
 
     n "Or, rather, a rather dead patch of grass bordering their town's park."
 
-    show sprout at left, small
+    show sprout at smallleft
     with dissolve
 
-    show confused bean at right, small
+    show confused bean at smallright
     with dissolve
 
     b "..."
@@ -182,13 +191,13 @@ label start:
 
     s "You're...?"
 
-    show concerned bean at right, small
+    show concerned bean at smallright
 
     hide confused bean
 
     b "I'M HUNGRY YOU STUPID KNUCKLEBUNS"
 
-    show inquisitive sprout at left, small
+    show inquisitive sprout at smallleft
 
     s "..."
 
@@ -199,7 +208,7 @@ label start:
 
         "WHY THE HELL ARE YOU STILL HUNGRY????":
 
-            show bean at right, small
+            show bean at smallright
 
             hide concerned bean
 
@@ -213,7 +222,7 @@ label start:
 
         "WHAT THE HELL IS A KNUCKLEBUNS????":
 
-            show happy bean at right, small
+            show happy bean at smallright
 
             hide concerned bean
 
@@ -227,13 +236,13 @@ label start:
 
             b "Nonetheless. You're still old as hell."
 
-            show bean at right, small
+            show bean at smallright
 
             hide happy bean
 
         "WHY THE HELL ARE YOU CALLING ME STUPID????":
 
-            show bean at right, small
+            show bean at smallright
 
             hide concerned bean
 
@@ -251,7 +260,7 @@ label start:
     
     s "I'm feeling a bit tired. I'll probably go soon."
 
-    show confused bean at right, small
+    show confused bean at smallright
 
     b "What about me??"
 
@@ -260,7 +269,7 @@ label start:
 
         "Take Bean with you":
 
-            show happy bean at right, small
+            show happy bean at smallright
 
             b "Yippee!!!!"
 
@@ -291,7 +300,7 @@ label start:
 
             b "You can't do me like this!"
 
-            show inquisitive sprout at left, small
+            show inquisitive sprout at smallleft
 
             s "What if I can?"
 
@@ -329,11 +338,11 @@ label start:
 
         "Knock over Bean's Jenga tower and then leave":
 
-            show confused bean at right, small
+            show confused bean at smallright
 
             b "You wanna die???"
 
-            show confused sprout at left, small
+            show confused sprout at smallleft
 
             s "N-"
 
