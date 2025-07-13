@@ -6,11 +6,33 @@
 define b = Character("bean")
 define s = Character("sprout")
 define n = Character("narrator")
+define m = Character("???")
+define db = Character("Bean's Doppelganger")
+
 # bean: concerned, confused, happy
 # sprout: confused, dumb, inquisitive
 
+image bean = "bean.png"
+image bean concerned = "bean concerned.png"
+image bean confused = "bean confused.png"
+image bean happy = "bean happy.png"
+
+image sprout = "sprout.png"
+image sprout confused = "sprout confused.png"
+image sprout dumb = "sprout dumb.png"
+image sprout inquisitive = "sprout inquisitive.png"
+
 transform small:
     zoom 0.8
+    xalign 0.5
+
+transform smallright:
+    zoom 0.8
+    xalign 1.0
+
+transform smallleft:
+    zoom 0.8
+    xalign 0.0
 
 label start:
 
@@ -18,6 +40,14 @@ label start:
 
     scene background
 
+    call intro
+    call out_for_lunch
+    call after_lunch
+    call go_home
+    call cookie_steal
+
+
+label intro:
     show bean at small
     with dissolve
 
@@ -51,8 +81,6 @@ label start:
 
             s "..."
 
-            hide confused sprout
-
         "Say nothing":
             s "Well..."
 
@@ -61,6 +89,7 @@ label start:
 
     s "And I'm pretty hungry."
 
+label out_for_lunch:
     menu:
         "Should Sprout..."
 
@@ -73,13 +102,9 @@ label start:
 
             s "This seems like a terrible idea. I'll not listen to you."
 
-            hide inquisitive sprout
-
-    hide sprout
-
-    show sprout at left, small
+    show sprout at smallleft
     
-    show bean at right, small
+    show bean at smallright
 
     s "Do you want to eat out, Bean?"
 
@@ -89,11 +114,11 @@ label start:
 
     s "...B-"
 
-    show concerned bean at right, small
+    show concerned bean at smallright
 
     b "I'M TRYING TO FOCUSSAJDLKSFSFAO"
 
-    show inquisitive sprout at left, small
+    show inquisitive sprout at smallleft
 
     s "ON WHAT EXACTLY???"
 
@@ -101,14 +126,10 @@ label start:
 
     s "I have so many questions for you..."
 
-    hide inquisitive sprout
-
     menu:
         "Choose a question."
 
         "ARE YOU HUNGRY????":
-
-            hide concerned bean
 
             b "Moderately so."
 
@@ -116,50 +137,41 @@ label start:
 
             b "It means what it means..."
 
-            show dumb sprout at left, small
+            show dumb sprout at smallleft
 
             s "???"
 
-            hide dumb sprout
-
         "WHY ARE YOU PLAYING JENGA ALONE????":
 
-            hide concerned bean
-
-            show confused bean at right, small
+            show confused bean at smallright
 
             b "I'm trying to FOCUS."
 
             s "THAT DOESN'T ANSWER THE QUESTION??"
 
             b "BUT IT DOES??"
-
-            hide confused bean
         
         "WHAT HAPPENED TO STUDYING FOR FINALS????":
 
-            hide concerned bean
-
-            show happy bean at right, small
+            show happy bean at smallright
 
             b "I gave up."
 
             s "Loser."
 
-            hide happy bean
-
     hide sprout with dissolve
 
     hide bean with dissolve
 
+label after_lunch:
     n "After coming back from a well-deserved (for Sprout) fast food outing, the two return to their comfort cove."
 
     n "Or, rather, a rather dead patch of grass bordering their town's park."
 
-    show sprout at left, small
+    show sprout at smallleft
     with dissolve
 
-    show confused bean at right, small
+    show confused bean at smallright
     with dissolve
 
     b "..."
@@ -182,26 +194,20 @@ label start:
 
     s "You're...?"
 
-    show concerned bean at right, small
-
-    hide confused bean
+    show concerned bean at smallright
 
     b "I'M HUNGRY YOU STUPID KNUCKLEBUNS"
 
-    show inquisitive sprout at left, small
+    show inquisitive sprout at smallleft
 
     s "..."
-
-    hide inquisitive sprout
 
     menu:
         "Choose a question."
 
         "WHY THE HELL ARE YOU STILL HUNGRY????":
 
-            show bean at right, small
-
-            hide concerned bean
+            show bean at smallright
 
             b "Smart people eat more."
 
@@ -213,9 +219,7 @@ label start:
 
         "WHAT THE HELL IS A KNUCKLEBUNS????":
 
-            show happy bean at right, small
-
-            hide concerned bean
+            show happy bean at smallright
 
             b "See, you're stupid. It's a part of the vocabulary these days."
 
@@ -227,15 +231,11 @@ label start:
 
             b "Nonetheless. You're still old as hell."
 
-            show bean at right, small
-
-            hide happy bean
+            show bean at smallright
 
         "WHY THE HELL ARE YOU CALLING ME STUPID????":
 
-            show bean at right, small
-
-            hide concerned bean
+            show bean at smallright
 
             b "I only speak the truth."
 
@@ -249,9 +249,10 @@ label start:
 
             s "..."
     
+label go_home:
     s "I'm feeling a bit tired. I'll probably go soon."
 
-    show confused bean at right, small
+    show confused bean at smallright
 
     b "What about me??"
 
@@ -260,7 +261,7 @@ label start:
 
         "Take Bean with you":
 
-            show happy bean at right, small
+            show happy bean at smallright
 
             b "Yippee!!!!"
 
@@ -280,8 +281,6 @@ label start:
 
             b "Fiiiiiiiiiiine."
 
-            n "Good ending :D"
-
         "Abandon Bean in the streets":
             b "Noooooooooooooooooooooo"
             
@@ -291,7 +290,7 @@ label start:
 
             b "You can't do me like this!"
 
-            show inquisitive sprout at left, small
+            show inquisitive sprout at smallleft
 
             s "What if I can?"
 
@@ -325,15 +324,13 @@ label start:
 
             b ">:("
 
-            n "Bad ending :0"
-
         "Knock over Bean's Jenga tower and then leave":
 
-            show confused bean at right, small
+            show confused bean at smallright
 
             b "You wanna die???"
 
-            show confused sprout at left, small
+            show confused sprout at smallleft
 
             s "N-"
 
@@ -343,6 +340,6 @@ label start:
 
             b "Uh-huh."
 
-            n "Bad ending :O"
+label cookie_steal:
 
     return
