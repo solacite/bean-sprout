@@ -40,11 +40,7 @@ label start:
 
     scene background
 
-    call intro
-    call out_for_lunch
-    call after_lunch
-    call go_home
-    call cookie_steal
+    jump intro
 
 
 label intro:
@@ -62,7 +58,6 @@ label intro:
     hide bean
 
     show sprout at small
-    with dissolve
 
     n "This is Sprout."
 
@@ -89,6 +84,8 @@ label intro:
 
     s "And I'm pretty hungry."
 
+    jump out_for_lunch
+
 label out_for_lunch:
     menu:
         "Should Sprout..."
@@ -101,6 +98,8 @@ label out_for_lunch:
             show inquisitive sprout at small
 
             s "This seems like a terrible idea. I'll not listen to you."
+    
+    hide inquisitive sprout
 
     show sprout at smallleft
     
@@ -162,6 +161,8 @@ label out_for_lunch:
     hide sprout with dissolve
 
     hide bean with dissolve
+
+    jump after_lunch
 
 label after_lunch:
     n "After coming back from a well-deserved (for Sprout) fast food outing, the two return to their comfort cove."
@@ -248,6 +249,8 @@ label after_lunch:
             b "And you must be the stupidest."
 
             s "..."
+
+            jump go_home
     
 label go_home:
     s "I'm feeling a bit tired. I'll probably go soon."
@@ -340,6 +343,4 @@ label go_home:
 
             b "Uh-huh."
 
-label cookie_steal:
-
-    return
+#label cookie_steal:
