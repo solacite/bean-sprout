@@ -18,6 +18,7 @@ label start:
     scene background
 
     show bean at small
+    with dissolve
 
     n "This is Bean."
 
@@ -30,6 +31,7 @@ label start:
     hide bean
 
     show sprout at small
+    with dissolve
 
     n "This is Sprout."
 
@@ -154,8 +156,10 @@ label start:
     n "Or, rather, a rather dead patch of grass bordering their town's park."
 
     show sprout at left, small
+    with dissolve
 
     show confused bean at right, small
+    with dissolve
 
     b "..."
 
@@ -221,6 +225,8 @@ label start:
             s "We're the same age."
 
             b "Nonetheless. You're still old as hell."
+
+            show bean at right, small
 
             hide happy bean
 
@@ -330,7 +336,7 @@ label start:
 
             s "I was joking!"
 
-            ".:. Bad Ending."
+            b "Uh-huh."
             
             return
 
