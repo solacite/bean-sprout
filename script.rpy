@@ -342,5 +342,49 @@ label go_home:
             s "I was joking!"
 
             b "Uh-huh."
+    jump cookie_steal
 
-#label cookie_steal:
+label cookie_steal:
+
+    show bean at smallright
+
+    show sprout at smallleft
+
+    n "Bean is about to say something when-"
+
+    m "Hehehe!"
+
+    show concerned bean at smallright
+
+    show inquisitive sprout at smallleft
+
+    b "HEY! Give that back!"
+
+    m "(unceremoniously skedaddles)"
+
+    show confused sprout at smallleft
+
+    s "What'd they take??"
+
+    b "MY CHOCOLATE CHIP COOKIE!!"
+
+    b "(skedaddles after the mystery man)"
+
+    show inquisitive sprout at smallleft
+
+    s "That thing is literally worth less than my life savings, and I don't even work a job..."
+
+    bool skedaddle = False;
+
+    if (!skedaddle):
+        menu:
+            "What should Sprout do?"
+
+            "Run after Bean":
+                skedaddle = True
+                s "I'M COMINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+
+            "Stay still":
+                s "..."
+
+    s "(skedaddles after bean)"
