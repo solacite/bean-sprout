@@ -390,7 +390,7 @@ label cookie_steal:
 
     default skedaddle = False
 
-    if not skedaddle:
+    while not skedaddle:
         menu:
             "What should Sprout do?"
 
@@ -402,3 +402,23 @@ label cookie_steal:
                 s "..."
 
     s "(skedaddles after bean)"
+
+    jump chase
+
+label chase:
+    #
+
+label caught:
+    #
+
+label fight:
+    #
+
+label sunset:
+    #
+
+label fall:
+    #
+
+label home_end:
+    #
