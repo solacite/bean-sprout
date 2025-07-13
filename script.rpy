@@ -3,11 +3,11 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define b = Character("bean")
-define s = Character("sprout")
-define n = Character("narrator")
-define m = Character("???")
-define db = Character("Bean's Doppelganger")
+define b = Character("bean", who_color="#575783")
+define s = Character("sprout", who_color="#a6c39b")
+define n = Character("narrator", who_color="#606060")
+define m = Character("???", who_color="#606060")
+define db = Character("Bean's Doppelganger", who_color="#d65656")
 
 # bean: concerned, confused, happy
 # sprout: confused, dumb, inquisitive
