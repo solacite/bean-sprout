@@ -14,6 +14,7 @@ transform small:
 
 label start:
 
+    play music "vibe.mp3" loop
 
     scene background
 
@@ -279,6 +280,8 @@ label start:
 
             b "Fiiiiiiiiiiine."
 
+            n "Good ending :D"
+
         "Abandon Bean in the streets":
             b "Noooooooooooooooooooooo"
             
@@ -322,6 +325,8 @@ label start:
 
             b ">:("
 
+            n "Bad ending :0"
+
         "Knock over Bean's Jenga tower and then leave":
 
             show confused bean at right, small
@@ -337,7 +342,7 @@ label start:
             s "I was joking!"
 
             b "Uh-huh."
-            
-            return
+
+            n "Bad ending :O"
 
     return
