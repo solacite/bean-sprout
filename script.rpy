@@ -382,7 +382,7 @@ label cookie_steal:
 
     b "MY CHOCOLATE CHIP COOKIE!!"
 
-    b "(skedaddles after the mystery man)"
+    b "(skedaddles after the mystery figure)"
 
     show inquisitive sprout at smallleft
 
@@ -406,19 +406,96 @@ label cookie_steal:
     jump chase
 
 label chase:
-    #
+    n "The mystery figure darts down an alleyway, Bean close behind."
 
-label caught:
-    #
+    n "There is a low wall at the end of the alley."
+
+    menu:
+        "What will Sprout do?"
+
+        "Follow Bean and the mystery figure down the narrow alley.":
+            n "The mystery figure struggles for a handhold on the brick wall at the end of the alley, but manages to pull themselves up."
+
+            n "Bean is close behind, hand reaching out for the figure's shoes."
+
+            n "Sprout stands behind Bean, out of breath. He can't progress further because of how narrow the alley is."
+
+            m "You'll never catch me!"
+
+            m "It's MY cookie now-"
+
+            n "Bean grabs the figure's shoes and pulls them down."
+
+            m "Augh-ack-oomf!"
+
+        "Run around the block and intercept the mystery figure.":
+            n "Sprout runs as if his life depends on it. It doesn't."
+
+            n "As he turns the corner, a flash of gray appears in front of him and-"
+
+            m "OW!"
+
+            n "The mystery figure body-slams into Sprout from the direction of the alley."
+
+            b "Bro, when did you get there?"
+
+            s "Uhhh."
+
+            n "Sprout is still recovering from the physical shock."
+
+            m "(makes a move to run)"
+
+            b "(grabs the figure) Nuh-uh!"
+
+        jump caught
 
 label fight:
-    #
+    m "That wasn't very nice!"
+
+    b "Now give it back."
+
+    m "Hmm..."
+
+    n "The mystery figure punches Bean on the side of his face."
+
+    b "Ow!"
+
+    menu:
+        "What should they do?"
+
+        "Attack the figure simultaneously":
+            b "Ahhhhhh!"
+
+            s "Ahhhhhh!"
+
+            m "AHHHHHH!"
+
+            n "The figure falls after being jumped by Bean and Sprout."
+
+        "Attack the figure one by one":
+            b "Ahhhhhh! (punches the figure)"
+
+            m "Ahhhhhh!"
+
+    n "The figure cowers in despair. Bean appears dismayed."
+
+    b "It was that easy?"
+
+    n "Bean takes the cookie from the figure's hands and uncovers their mask."
+
+    b "Wha...huh???"
+
+    db "Hi. I'm Bean."
+
+    b "Why do you look EXACTLY LIKE ME??"
+
+    db "You're me. I'm not you. I'm the real one. I'm-"
+
+    b "THERE CAN ONLY BE ONE!"
+
+    n "Bean proceeds to sucker-punch his doppelganger."
+
+    jump sunset
 
 label sunset:
-    #
-
-label fall:
-    #
-
-label home_end:
     #
