@@ -406,6 +406,11 @@ label cookie_steal:
     jump chase
 
 label chase:
+    
+    show concerned bean at smallright
+
+    show inquisitive sprout at smallleft
+
     n "The mystery figure darts down an alleyway, Bean close behind."
 
     n "There is a low wall at the end of the alley."
@@ -447,7 +452,7 @@ label chase:
 
             b "(grabs the figure) Nuh-uh!"
 
-        jump caught
+    jump fight
 
 label fight:
     m "That wasn't very nice!"
@@ -498,6 +503,11 @@ label fight:
     jump sunset
 
 label sunset:
+
+    show bean at smallright
+
+    show sprout at smallleft
+
     b "Well. That was a lovely day. Wasn't it?"
 
     s "Mhm."
@@ -505,31 +515,36 @@ label sunset:
     b "The sun should be setting around now. Wanna go take a look?"
 
     menu:
-        "What will Sprout do?":
-            "Go home":
-                b "Well. I guess that's okay."
+        "What will Sprout do?"
 
-                b "Goodnight, Sprout."
+        "Go home":
+            b "Well. I guess that's okay."
 
-                s "'Night, Bean."
+            b "Goodnight, Sprout."
 
-                n "Congrats on getting the good ending!"
+            s "'Night, Bean."
 
-            "Watch the sunset":
-                n "The two walk to the dock and sit at its edge."
+            n "Congrats on getting the good ending!"
 
-                n "The sunset is magnificient."
+        "Watch the sunset":
+            n "The two walk to the dock and sit at its edge."
 
-                b "Isn't this nice."
+            n "The sunset is magnificient."
 
-                s "You know, it'd be cool if-"
+            b "Isn't this nice."
 
-                m "Hehehe!"
+            s "You know, it'd be cool if-"
 
-                b "Again???"
+            m "Hehehe!"
 
-                n "The two are shoved into the ocean. As they fall, Sprout can make out a face."
+            show inquisitive sprout at smallleft
 
-                s "My doppelganger...???"
+            show concerned bean at smallright
 
-                n "Bad ending D:"
+            b "Again???"
+
+            n "The two are shoved into the ocean. As they fall, Sprout can make out a face."
+
+            s "My doppelganger...???"
+
+            n "Bad ending D:"
